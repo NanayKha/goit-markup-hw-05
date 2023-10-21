@@ -20,20 +20,37 @@ a[href="#WEBSTUDIO"] {
     letter-spacing: 0.32px;
 }
 
-.main-link:hover,
-.main-link:focus {
-    color: var(--OCEAN, #404BBF);
-}
+
 .main-link {
     color: #2E2F42;
     text-decoration: none;
-    display: flex;
-    align-items: flex-start;
+    /*display: flex;
+    align-items: flex-start;*/
     gap: 40px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 150% */
     letter-spacing: 0.32px;   
+}
+
+.main-link:hover,
+.main-link:focus {
+    color: var(--OCEAN, #404BBF);
+}
+
+.active {
+    color: var(--OCEAN, #404BBF);
+} 
+
+.active::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--OCEAN, #404BBF);
+    position: relative;
+    top: 20px
 }
 
 .contact-link {
@@ -264,6 +281,7 @@ ul {
     background: var(--DAIRY, #FCFCFC);
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    padding: 24px;
 }
 
 .is-hidden {
@@ -276,12 +294,20 @@ ul {
     color: #2E2F42;
     width: 24px;
     height: 24px;
-    border-radius: 50%;
-    border: 10px;
-    shape-outside: margin-box;
+    border-radius: 100%;
+    border: 1px solid rgba(161, 163, 220, 0.7);
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.10);
-    
+    cursor: pointer; 
+}
+
+.modal-close-btn:hover {
+    fill: currentColor;
+    border: 1px solid currentColor;
 }
 /*END OF HERO*/
 .section3 {
@@ -554,5 +580,34 @@ button {
     margin-left: 16px;
 }
 
+.project-card img {
+    display: block;
+    
+}
 
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card2:hover .image-caption {
+    opacity: 1;
+    transform: translateY(0)
+}
+.image-caption p {
+    color: var(--CLOUD, #F4F4FD);
+    padding: 40px 32px;
+}
+.image-caption {
+    position: absolute;
+    background-color: rgba(77, 90, 229, .75);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform  0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
 /*END OF PORTFOLIO*/
