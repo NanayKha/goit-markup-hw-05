@@ -246,6 +246,44 @@ ul {
     cursor: pointer;
 }
 
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    width: 408px;
+    height: 584px;
+    background: var(--DAIRY, #FCFCFC);
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+.is-hidden {
+    pointer-events: none ;
+    opacity: 0;
+}
+
+.modal-close-btn{
+    background-color: var(--CORNFLOWER, #E7E9FC);
+    color: #2E2F42;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 10px;
+    shape-outside: margin-box;
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.10);
+    
+}
+/*END OF HERO*/
 .section3 {
     background: var(--CLOUD, #F4F4FD);
     width: 1440px;
